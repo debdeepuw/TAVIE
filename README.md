@@ -290,7 +290,7 @@ Finally, to show the performance of TAVIE, we present the boxplots of the $\ell_
 
 <p align="center">
   <img src="assets/TAVIE_MFVI_BBVI_MSE_Runtime_Comparison.gif" alt="TAVIE Laplace ELBO" width="600"/>
-  <br><em>Comparison of TAVIE against MFVI and BBVI under the Student's-t model</em>
+  <br><em>Comparison of TAVIE against MFVI and BBVI under the Student's-t model, animated over number of repetitions</em>
 </p>
 
 **Note**: For more TAVIE comparisons under different SSG likelihoods, please see [comparisons.ipynb](./comparisons.ipynb).
