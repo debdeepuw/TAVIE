@@ -150,6 +150,6 @@ We consider showing the utilities of each components in the `TAVIE_loc_scale()` 
 **Prior**: $(\boldsymbol{\beta}, \tau^2)$ is endowed upon with a prior as, $\boldsymbol{\beta}\mid \tau^2 \sim N(\boldsymbol{m}, \boldsymbol{V}/\tau^2)$ and $\tau^2\sim Gamma(a/2, b/2)$.
 
 We first generate the data from the Laplace model with data parameters:
-* $(n, p, \tau^2_{\text{true}) = (10000, 5, 8)$,
+* $(n, p, \tau^2_{\text{true}}) = (10000, 5, 8)$,
 * The design matrix $X\in \mathbb{R}^{p+1}$ comprise of entries from the *standard normal distribution*, and
 * $\beta_{\text{true}} = (\beta_0, \beta)\in \mathbb{R}^{p+1}$ also is generated from the *standard normal distribution*.
