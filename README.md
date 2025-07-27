@@ -175,3 +175,16 @@ Consequently, we initialize the TAVIE model and *fit* the initialized model usin
 laplace_model = TAVIE_loc_scale(family="laplace", fit_intercept=True) # choosing an intercept term
 laplace_model.fit(X, y, verbose=True) # fit the TAVIE model
 ```
+
+Now that the TAVIE model has been fit, we obtain the resultant *estimated TAVIE means* of $\beta_{\text{true}}$ and $\tau_{\text{true}}$ using the `get_TAVIE_means()` functionality along with printing them on the console using the `verbose=True` argument:
+
+```python
+laplace_model.get_TAVIE_means(verbose=True) # get the TAVIE estimates
+```
+
+If the user is interested to obtain the *variational estimates*, it can be done using `get_variational_estimates()`:
+
+```python
+# obtain the variational parameter estimates; use 'variational_est' as required
+variational_est = laplace_model.get_variational_estimates()
+```
