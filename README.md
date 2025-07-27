@@ -29,3 +29,21 @@ TAVIE works for a large class of SSG likelihoods, currently comprising mainly of
 - *Bayesian Quantlile Regression*: As an extension of the Type-I likelihood to the asymmetric Laplace distribution.
 
 Due to the large class of models which can be fitted and infered from using TAVIE, it can be applied to a broad class of real world problems spanning applications in finance and economics, as well as in biostatistics viz., gene expression modeling, microbiome studies and neuroscience.
+
+### Installation and Dependencies
+
+To get started with TAVIE, clone the current Github repository and install the required dependencies (`ipython==8.30.0`, `matplotlib==3.10.3`, `numpy==2.3.2`, `pandas==2.3.1`, `rich==14.1.0`, `scikit_learn==1.7.1`, `scipy==1.16.0`, `torch==2.7.1`, and `tqdm==4.67.1`):
+
+```
+# using SSH on bash
+git clone git@github.com:Roy-SR-007/TAVIE.git
+
+# or, using HTTPS on bash
+git clone https://github.com/Roy-SR-007/TAVIE.git
+
+# moving to the TAVIE directory
+cd TAVIE
+
+# install the required dependencies
+pip install -r requirements.txt
+```
