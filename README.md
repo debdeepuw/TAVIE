@@ -118,7 +118,7 @@ loc_scale_model = TAVIE_loc_scale(fit_intercept=True, scale_X=False, scale_y=Fal
 qr_model = TAVIE(fit_intercept=True, scale_X=False, scale_y=False)
 
 ## following is the Type II SSG example for 'binomial' (logistic regression), the other option is 'negbin' for negative-binomial regression
-type_II_model = TAVIE_type_II(fint_intercept=True, scale_X=False, family="binomial")
+type_II_model = TAVIE_type_II(fit_intercept=True, scale_X=False, family="binomial")
 ```
 
 **Note**: When initializing the TAVIE location-scale model for `laplace` or `student`, `afunc` and `cfunc` are computed in-built, whereas if a custom location-scale family is chosen, the corresponding callable functions for `afunc` and `cfunc` are to be provided to `TAVIE_loc_scale()`.
