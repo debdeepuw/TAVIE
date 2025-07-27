@@ -188,3 +188,13 @@ If the user is interested to obtain the *variational estimates*, it can be done 
 # obtain the variational parameter estimates; use 'variational_est' as required
 variational_est = laplace_model.get_variational_estimates()
 ```
+
+To check the convergence diagnostics, we also have the `get_elbo()` functionality that could be used to obtain the *evidence lower bound* (ELBO) history over iterations:
+
+```python
+ELBO = laplace_model.get_elbo() # get the ELBO across iterations
+```
+
+<p align="center">
+  <img src="assets/TAVIE_Laplace_ELBO_animation.gif" alt="TAVIE Laplace ELBO" width="600"/>
+</p>
