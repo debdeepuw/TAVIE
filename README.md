@@ -64,8 +64,6 @@ The `TAVIE` package wrapped in the TAVIE folder deals with the implementation of
 
 ---
 
-#### Classes and Supported Models
-
 | Class             | Target SSG Model               | Supported Likelihoods                               | Prior Type                  |
 |-------------------|--------------------------------|-----------------------------------------------------|-----------------------------|
 | `TAVIE_loc_scale` | Location-scale family (Type I) | Laplace, Student’s-t, Custom location-scale         | Gaussian × Inverse-Gamma    |
@@ -74,8 +72,38 @@ The `TAVIE` package wrapped in the TAVIE folder deals with the implementation of
 
 ---
 
-For importing all these above-mentioned classes at once:
+For importing all these above-mentioned classes and initializing them at once:
 
 ```python
+# importing all the TAVIE classes
 from TAVIE import *
+
+# initializing the TAVIE location-scale, TAVIE_QR, and TAVIE_type_II models respectively
+## following is the location-scale example for 'laplace', other options are 'student' and 'loc_scale' (for general location-scale family)
+loc_scale_model = TAVIE_loc_scale(fit_intercept=True, scale_X=False, scale_y=False, family="laplace", afunc=None, cfunc=None)
+
+qr_model = TAVIE(fit_intercept=True, scale_X=False, scale_y=False)
+
+## following is the Type II SSG example for 'binomial' (logistic regression), the other option is 'negbin' for negative-binomial regression
+type_II_model = TAVIE_type_II(fint_intercept=True, scale_X=False, family="binomial")
 ```
+
+**Note**: When initializing the TAVIE location-scale model for `laplace` or `student', `afunc` and `cfunc` are computed in-built, whereas if a custom location-scale family is chosen, the corresponding callable functions for `afunc` and `cfunc` are to be provided to `TAVIE_loc_scale()`.
+
+### Components of each TAVIE class
+
+For each of the TAVIE class listed above, following are the components and their respective functionalities.
+
+---
+
+| Method Name                   | `TAVIE_loc_scale` | `TAVIE_type_II` | `TAVIE_QR` | Description                                                                 |
+|-------------------------------|-------------------|-----------------|------------|-----------------------------------------------------------------------------|
+| `fit()`                       | ✅                | ✅               | ✅         | Fits the TAVIE model to data using                                          |
+| `get_TAVIE_means()`           | ✅                | ✅               | ✅         | Returns (and optionally displays) the TAVIE posterior means of parameters   |
+| `get_variational_estimates()` | ✅                | ✅               | ✅         | Returns a dictionary of variational parameters (mean, covariance)           |
+| `get_elbo()`                  | ✅                | ✅               | ✅         | Returns ELBO values tracked across iterations                               |
+
+✅ = Supported
+
+---
+
