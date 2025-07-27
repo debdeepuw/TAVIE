@@ -1,7 +1,7 @@
 # TAVIE: A Generalized Tangent Approximation Framework for Strongly Super-Gaussian Likelihoods
 
 <p>
-  <img src="assets/TAVIE_animated_logo_white.gif" alt="TAVIE_logo" width="280"/>
+  <img src="logo.gif" alt="TAVIE_logo" width="280"/>
 </p>
 
 [![Python](https://img.shields.io/badge/Python-3.9-blue)](https://www.python.org/)
