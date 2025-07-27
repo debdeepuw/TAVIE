@@ -198,3 +198,5 @@ ELBO = laplace_model.get_elbo() # get the ELBO across iterations
 <p align="center">
   <img src="assets/TAVIE_Laplace_ELBO_animation.gif" alt="TAVIE Laplace ELBO" width="600"/>
 </p>
+
+**Note**: TAVIE applied to other SSG likelihoods along with the utilities of each components in the different TAVIE classes have been illustrated in [TAVIE_examples.ipynb](./TAVIE_examples.ipynb).
