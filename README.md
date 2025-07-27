@@ -214,7 +214,7 @@ First, we initialize the corresponding Student's-t TAVIE model:
 t_model = TAVIE_loc_scale(family="student", fit_intercept=True)
 ```
 
-Following the model initialization, we set the experimental data parameters and containers to store the $L_2-$errors between the true and estimated parameters ($\beta$ and $\tau^2$) from TAVIE, MFVI, and BBVI.
+Following the model initialization, we set the experimental data parameters and containers to store the $\ell_2$ errors between the true and estimated parameters ($\beta$ and $\tau^2$) from TAVIE, MFVI, and BBVI.
 
 * The true regression coefficients are generated from $\beta \sim N(2, \tau^{-2})$, where $\tau^2 = 2$, and
 * The degrees of freedom $\nu$ is set as $2$.
@@ -286,7 +286,7 @@ for rep in trange(num_reps, desc="Repetitions"):
     mse_tau2_BBVI[rep] = (tau2_est3 - tau2_true)**2
 ```
 
-Finally, to show the performance of TAVIE, we present the boxplots of the $L_2-$errors between the true and estimated parameters ($\beta$ and $\tau^2$), along with the boxplots of the *run-times* across TAVIE, MFVI, and BBVI.
+Finally, to show the performance of TAVIE, we present the boxplots of the $\ell_2$ errors between the true and estimated parameters ($\beta$ and $\tau^2$), along with the boxplots of the *run-times* across TAVIE, MFVI, and BBVI.
 
 <p align="center">
   <img src="assets/TAVIE_MFVI_BBVI_MSE_Runtime_Comparison.gif" alt="TAVIE Laplace ELBO" width="600"/>
