@@ -17,11 +17,33 @@
 
 This repository holds the implementations and source code of *Tangent Approximation based Variational InferencE* (**TAVIE**) proposed in Roy, S., Dey, P., Pati, D., & Mallick, B. K. (2025), *A Generalized Tangent Approximation Framework for Strongly Super‑Gaussian Likelihoods*, [arXiv:2504.05431](https://arxiv.org/abs/2504.05431).
 
+---
+
+### Developers and Maintainers
+
+**Somjit Roy**  
+Department of Statistics  
+Texas A&M University, College Station, TX, USA  
+
+📧 Email: [sroy_123@tamu.edu](mailto:sroy_123@tamu.edu)  
+🌐 Website: [https://roy-sr-007.github.io](https://roy-sr-007.github.io)
+
+**Pritam Dey**  
+Department of Statistics  
+Texas A&M University, College Station, TX, USA  
+
+📧 Email: [pritam.dey@tamu.edu](mailto:pritam.dey@tamu.edu)  
+🌐 Website: [https://pritamdey.github.io/](https://pritamdey.github.io/)
+
+---
+
 ### NEWS
 
 - This is the first official release of TAVIE v1.0.0 on GitHub.
 - Explore different example cases, settings and usage of TAVIE across various strongly super-Gaussian (SSG) likelihoods with comparison against other variational inference (VI) algorithms.
 - Application of TAVIE to real world data, to be added soon.
+
+---
 
 ### Overview
 
@@ -38,6 +60,8 @@ TAVIE works for a large class of SSG likelihoods, currently comprising mainly of
 - *Bayesian Quantlile Regression*: As an extension of the Type-I likelihood to the asymmetric Laplace distribution.
 
 Due to the large class of models which can be fitted and infered from using TAVIE, it can be applied to a broad class of real world problems spanning applications in finance and economics, as well as in biostatistics viz., gene expression modeling, microbiome studies and neuroscience.
+
+---
 
 ### Installation and Dependencies
 
@@ -66,6 +90,7 @@ cd TAVIE
 # install the required dependencies
 pip install -r requirements.txt
 ```
+---
 
 ### Functionalities of the TAVIE class
 
@@ -99,11 +124,12 @@ type_II_model = TAVIE_type_II(fint_intercept=True, scale_X=False, family="binomi
 
 **Note**: When initializing the TAVIE location-scale model for `laplace` or `student`, `afunc` and `cfunc` are computed in-built, whereas if a custom location-scale family is chosen, the corresponding callable functions for `afunc` and `cfunc` are to be provided to `TAVIE_loc_scale()`.
 
+---
+
 ### Components of each TAVIE class
 
 For each of the TAVIE class listed above, following are the components and their respective functionalities.
 
----
 
 | Method Name                   | `TAVIE_loc_scale` | `TAVIE_type_II` | `TAVIE_QR` | Description                                                                 |
 |-------------------------------|-------------------|-----------------|------------|-----------------------------------------------------------------------------|
