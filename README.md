@@ -287,3 +287,12 @@ for rep in trange(num_reps, desc="Repetitions"):
 ```
 
 Finally, to show the performance of TAVIE, we present the boxplots of the $L_2-$errors between the true and estimated parameters ($\beta$ and $\tau^2$), along with the boxplots of the *run-times* across TAVIE, MFVI, and BBVI.
+
+<p align="center">
+  <img src="assets/TAVIE_MFVI_BBVI_MSE_Runtime_Comparison.gif" alt="TAVIE Laplace ELBO" width="600"/>
+  <br><em>Comparison of TAVIE against MFVI and BBVI under the Student's-t model</em>
+</p>
+
+**Note**: For more TAVIE comparisons under different SSG likelihoods, please see [comparisons.ipynb](./comparisons.ipynb).
+
+---
