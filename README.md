@@ -44,7 +44,7 @@ To get started with TAVIE, which is build on `Python==3.13.5`, clone the current
 * `torch==2.7.1`
 * `tqdm==4.67.1`
 
-```
+```bash
 # using SSH on bash
 git clone git@github.com:Roy-SR-007/TAVIE.git
 
@@ -73,3 +73,9 @@ The `TAVIE` package wrapped in the TAVIE folder deals with the implementation of
 | `TAVIE_type_II`    | GLMs (Exponential Family)     | Binomial, Negative Binomial                         | Gaussian                    |
 
 ---
+
+For importing all these above-mentioned classes at once:
+
+```python
+from TAVIE import *
+```
