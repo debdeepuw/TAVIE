@@ -10,7 +10,6 @@
 [![Issues](https://img.shields.io/github/issues/Roy-SR-007/TAVIE)](https://github.com/Roy-SR-007/TAVIE/issues)
 [![Pull Requests](https://img.shields.io/github/issues-pr/Roy-SR-007/TAVIE)](https://github.com/Roy-SR-007/TAVIE/pulls)
 [![CI](https://github.com/Roy-SR-007/TAVIE/actions/workflows/main.yml/badge.svg)](https://github.com/Roy-SR-007/TAVIE/actions)
-[![Coverage](https://img.shields.io/codecov/c/github/Roy-SR-007/TAVIE)](https://codecov.io/gh/Roy-SR-007/TAVIE)
 
 
 
