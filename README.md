@@ -88,7 +88,7 @@ qr_model = TAVIE(fit_intercept=True, scale_X=False, scale_y=False)
 type_II_model = TAVIE_type_II(fint_intercept=True, scale_X=False, family="binomial")
 ```
 
-**Note**: When initializing the TAVIE location-scale model for `laplace` or `student', `afunc` and `cfunc` are computed in-built, whereas if a custom location-scale family is chosen, the corresponding callable functions for `afunc` and `cfunc` are to be provided to `TAVIE_loc_scale()`.
+**Note**: When initializing the TAVIE location-scale model for `laplace` or `student`, `afunc` and `cfunc` are computed in-built, whereas if a custom location-scale family is chosen, the corresponding callable functions for `afunc` and `cfunc` are to be provided to `TAVIE_loc_scale()`.
 
 ### Components of each TAVIE class
 
