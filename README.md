@@ -96,7 +96,6 @@ pip install -r requirements.txt
 
 The `TAVIE` package wrapped in the TAVIE folder deals with the implementation of the corresponding VI algorithm under various SSG probability models. It provides flexible, modular support across different likelihood families and modeling tasks.
 
----
 
 | Class             | Target SSG Model               | Supported Likelihoods                               | Prior Type                  |
 |-------------------|--------------------------------|-----------------------------------------------------|-----------------------------|
