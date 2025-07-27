@@ -1,17 +1,15 @@
 # TAVIE: A Generalized Tangent Approximation Framework for Strongly Super-Gaussian Likelihoods
 
-<p align="left">
-  <!-- Project metadata -->
-  [![Python](https://img.shields.io/badge/Python-3.9-blue)](https://www.python.org/)
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-  [![arXiv](https://img.shields.io/badge/arXiv-2504.05431-b31b1b)](https://arxiv.org/abs/2504.05431)
-  [![Stars](https://img.shields.io/github/stars/Roy-SR-007/TAVIE)](https://github.com/Roy-SR-007/TAVIE/stargazers)
-  [![Forks](https://img.shields.io/github/forks/Roy-SR-007/TAVIE)](https://github.com/Roy-SR-007/TAVIE/network)
-  [![Repo Size](https://img.shields.io/github/repo-size/Roy-SR-007/TAVIE)](https://github.com/Roy-SR-007/TAVIE)
-  [![Last Commit](https://img.shields.io/github/last-commit/Roy-SR-007/TAVIE)](https://github.com/Roy-SR-007/TAVIE/commits/main)
-  [![Issues](https://img.shields.io/github/issues/Roy-SR-007/TAVIE)](https://github.com/Roy-SR-007/TAVIE/issues)
-  [![Pull Requests](https://img.shields.io/github/issues-pr/Roy-SR-007/TAVIE)](https://github.com/Roy-SR-007/TAVIE/pulls)
-</p>
+[![Python](https://img.shields.io/badge/Python-3.9-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![arXiv](https://img.shields.io/badge/arXiv-2504.05431-b31b1b)](https://arxiv.org/abs/2504.05431)
+[![Stars](https://img.shields.io/github/stars/Roy-SR-007/TAVIE)](https://github.com/Roy-SR-007/TAVIE/stargazers)
+[![Forks](https://img.shields.io/github/forks/Roy-SR-007/TAVIE)](https://github.com/Roy-SR-007/TAVIE/network)
+[![Repo Size](https://img.shields.io/github/repo-size/Roy-SR-007/TAVIE)](https://github.com/Roy-SR-007/TAVIE)
+[![Last Commit](https://img.shields.io/github/last-commit/Roy-SR-007/TAVIE)](https://github.com/Roy-SR-007/TAVIE/commits/main)
+[![Issues](https://img.shields.io/github/issues/Roy-SR-007/TAVIE)](https://github.com/Roy-SR-007/TAVIE/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/Roy-SR-007/TAVIE)](https://github.com/Roy-SR-007/TAVIE/pulls)
+
 
 <p align="center">
   <img src="assets/TAVIE_animated_logo.gif" alt="TAVIE_logo" width="650"/>
