@@ -205,4 +205,85 @@ ELBO = laplace_model.get_elbo() # get the ELBO across iterations
 
 ### TAVIE vs other state-of-the-art variational inference algorithms
 
-We present a bake-off of TAVIE against *mean-field variational inference* (MFVI) and *black-box variational inference* (BBVI) respectively for the *Student's-t* model. The MFVI algorithm is adopted from [Wand et al., 2011](doi:10.1214/11-BA631) and is available in [CompetingMethods/mfvi.py](./CompetingMethods) along with the BBVI algorithm in [CompetingMethods/bbvi.py](./CompetingMethods).
+We present a bake-off of TAVIE against *mean-field variational inference* (MFVI) and *black-box variational inference* (BBVI) respectively for the *Student's-t* model. The MFVI algorithm is adopted from [Wand et al., 2011](https://projecteuclid.org/journals/bayesian-analysis/volume-6/issue-4/Mean-Field-Variational-Bayes-for-Elaborate-Distributions/10.1214/11-BA631.full) and is available in [CompetingMethods/mfvi.py](./CompetingMethods) along with the BBVI algorithm in [CompetingMethods/bbvi.py](./CompetingMethods).
+
+First, we initialize the corresponding Student's-t TAVIE model:
+
+```python
+# TAVIE model initialization
+t_model = TAVIE_loc_scale(family="student", fit_intercept=True)
+```
+
+Following the model initialization, we set the experimental data parameters and containers to store the $L_2-$errors between the true and estimated parameters ($\beta$ and $\tau^2$) from TAVIE, MFVI, and BBVI.
+
+* The true regression coefficients are generated from $\beta \sim N(2, \tau^{-2})$, where $\tau^2 = 2$, and
+* The degrees of freedom $\nu$ is set as $2$.
+
+```python
+# Experiment parameters
+n = 10000
+p = 5
+nu_true = 2
+tau2_true = 2
+num_reps = 100
+
+# Containers for metrics
+mse_beta_MFVI = np.zeros(num_reps)
+mse_beta_BBVI = np.zeros(num_reps)
+mse_beta_TAVIE = np.zeros(num_reps)
+mse_tau2_MFVI = np.zeros(num_reps)
+mse_tau2_BBVI = np.zeros(num_reps)
+mse_tau2_TAVIE = np.zeros(num_reps)
+# for comparing the speed of the respective algorithms
+time_TAVIE = np.zeros(num_reps)
+time_MFVI = np.zeros(num_reps)
+time_BBVI = np.zeros(num_reps)
+
+# True beta vector
+beta_true = np.random.normal(loc=2.0, scale=1.0, size=p+1)
+```
+
+We repeat this experiment for `num_reps=100` times and use the functionalities provided in the `TAVIE_loc_scale()` class to obtain the results:
+
+```python
+# Main loop with progress bar, repeating the experiment 'num_reps' times
+for rep in trange(num_reps, desc="Repetitions"):
+    # Generate synthetic data
+    X = np.random.normal(size=(n, p))
+    X_bbvi = np.column_stack((np.ones(n), X))
+    
+    error = t.rvs(df=nu_true, size=n) / np.sqrt(tau2_true)
+    y = beta_true[0] + X @ beta_true[1:len(beta_true)] + error
+
+    # TAVIE estimator
+    t0 = perf_counter()
+    t_model.fit(X, y, nu=nu_true, verbose=False) # fitting the TAVIE model for Student's-t
+    time_TAVIE[rep] = perf_counter() - t0
+    beta_est, tau2_est = t_model.get_TAVIE_means(verbose=False) # obtaining the TAVIE estimates
+    mse_beta_TAVIE[rep] = np.mean((beta_est - beta_true)**2)
+    mse_tau2_TAVIE[rep] = (tau2_est - tau2_true)**2
+    
+
+    # MFVI estimator
+    t0 = perf_counter()
+    beta_hat, sigma_sq_hat, nu_hat = MFVI_Student(X_bbvi, y, 
+                                                  mu_beta=np.zeros(p+1), Sigma_beta=np.eye(p+1), 
+                                                  A=2, B=2, nu_min=2.0, 
+                                                  nu_max=20.0, tol=1e-6, verbose = False)
+    time_MFVI = perf_counter() - t0
+    beta_est2 = beta_hat
+    tau2_est2 = 1/sigma_sq_hat
+    mse_beta_MFVI[rep] = np.mean((beta_est2 - beta_true)**2)
+    mse_tau2_MFVI[rep] = (tau2_est2 - tau2_true)**2
+
+    # BBVI estimator
+    t0 = perf_counter()
+    res2 = BBVI_student(X_bbvi, y, nu=nu_true)
+    time_BBVI[rep] = perf_counter() - t0
+    beta_est3 = res2['beta_mean']
+    tau2_est3 = res2['tau2_mean']
+    mse_beta_BBVI[rep] = np.mean((beta_est3 - beta_true)**2)
+    mse_tau2_BBVI[rep] = (tau2_est3 - tau2_true)**2
+```
+
+Finally, to show the performance of TAVIE, we plot the boxplots of the $L_2-$errors between the true and estimated parameters ($\beta$ and $\tau^2$), along with the boxplots of the *run-times* across TAVIE, MFVI, and BBVI.
