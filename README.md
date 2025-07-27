@@ -5,6 +5,9 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2504.05431-b31b1b)](https://arxiv.org/abs/2504.05431)
 [![TAVIE JupyterBook](https://img.shields.io/badge/JupyterBook-view-blueviolet?logo=Jupyter)](https://roy-sr-007.github.io/TAVIE_JupyterBook)
 
+<p align="center">
+  <img src="assets/TAVIE_favicon.png" alt="TAVIE logo" width="80"/>
+</p>
 
 This repository holds the implementations and source code of *Tangent Approximation based Variational InferencE* (**TAVIE**) proposed in Roy, S., Dey, P., Pati, D., & Mallick, B. K. (2025), *A Generalized Tangent Approximation Framework for Strongly Super‑Gaussian Likelihoods*, [arXiv:2504.05431](https://arxiv.org/abs/2504.05431).
 
