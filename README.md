@@ -1,11 +1,26 @@
 # TAVIE: A Generalized Tangent Approximation Framework for Strongly Super-Gaussian Likelihoods
 
-<p align="right">
-  <img src="assets/TAVIE_animated_logo.gif" alt="TAVIE_logo" width="600"/>
-</p>
-[![Python](https://img.shields.io/badge/Python-3.9-blue)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![arXiv](https://img.shields.io/badge/arXiv-2504.05431-b31b1b)](https://arxiv.org/abs/2504.05431)
+<table>
+  <tr>
+    <td>
+      <p align="left">
+        <a href="https://www.python.org/">
+          <img alt="Python" src="https://img.shields.io/badge/Python-3.9-blue"/>
+        </a>
+        <a href="./LICENSE">
+          <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg"/>
+        </a>
+        <a href="https://arxiv.org/abs/2504.05431">
+          <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2504.05431-b31b1b"/>
+        </a>
+      </p>
+    </td>
+    <td align="right">
+      <img src="assets/TAVIE_animated_logo.gif" alt="TAVIE Logo" width="320"/>
+    </td>
+  </tr>
+</table>
+
 
 
 This repository holds the implementations and source code of *Tangent Approximation based Variational InferencE* (**TAVIE**) proposed in Roy, S., Dey, P., Pati, D., & Mallick, B. K. (2025), *A Generalized Tangent Approximation Framework for Strongly Super‑Gaussian Likelihoods*, [arXiv:2504.05431](https://arxiv.org/abs/2504.05431).
