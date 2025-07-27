@@ -151,5 +151,19 @@ We consider showing the utilities of each components in the `TAVIE_loc_scale()` 
 
 We first generate the data from the Laplace model with data parameters:
 * $(n, p, \tau^2_{\text{true}}) = (10000, 5, 8)$,
-* The design matrix $X\in \mathbb{R}^{p+1}$ comprise of entries from the *standard normal distribution*, and
-* $\beta_{\text{true}} = (\beta_0, \beta)\in \mathbb{R}^{p+1}$ also is generated from the *standard normal distribution*.
+* The design matrix $X\in \mathbb{R}^{p+1}$ comprise of entries from the *standard normal distribution*,
+* $\beta_{\text{true}} = (\beta_0, \beta)\in \mathbb{R}^{p+1}$ is also generated from the *standard normal distribution*, and
+* $\epsilon_i \sim Laplace(0, \tau_{\text{true}}^{-2})$.
+
+```{python}
+# Simulated data
+n = 10000
+p = 5
+tau2 = 8
+
+# Design matrix, true regression coefficients and response
+X = np.random.normal(size=(n, p))
+beta_true = np.random.normal(loc=0.0, scale=1.0, size=p+1)
+error = np.random.laplace(size=n, loc=0.0, scale = 1/np.sqrt(tau2))
+y = beta_true[0] + X @ beta_true[1:len(beta_true)] + error
+```
