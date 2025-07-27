@@ -66,10 +66,10 @@ The `TAVIE` package wrapped in the TAVIE folder deals with the implementation of
 
 #### Classes and Supported Models
 
-| Class              | Target Model                | Supported Likelihoods                    | Prior Type                  |
-|-------------------|-----------------------------|------------------------------------------|-----------------------------|
-| `TAVIE_loc_scale` | Location-scale family (Type     | Laplace, Student’s-t, Custom SSG         | Gaussian × Inverse-Gamma   |
-| `TAVIE_QR`         | Quantile Regression          | Asymmetric Laplace (Quantile Regression) | Gaussian                   |
-| `TAVIE_type_II`    | GLMs (Exponential Family)    | Binomial, Negative Binomial              | Gaussian                   |
+| Class             | Target SSG Model               | Supported Likelihoods                               | Prior Type                  |
+|-------------------|--------------------------------|-----------------------------------------------------|-----------------------------|
+| `TAVIE_loc_scale` | Location-scale family (Type I) | Laplace, Student’s-t, Custom location-scale         | Gaussian × Inverse-Gamma    |
+| `TAVIE_QR`         | Quantile Regression           | Asymmetric Laplace (Quantile Regression)            | Gaussian                    |
+| `TAVIE_type_II`    | GLMs (Exponential Family)     | Binomial, Negative Binomial                         | Gaussian                    |
 
 ---
