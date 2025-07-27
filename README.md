@@ -57,3 +57,19 @@ cd TAVIE
 # install the required dependencies
 pip install -r requirements.txt
 ```
+
+### Functionalities of the TAVIE class
+
+The `TAVIE` package wrapped in the TAVIE folder deals with the implementation of the corresponding VI algorithm under various SSG probability models. It provides flexible, modular support across different likelihood families and modeling tasks.
+
+---
+
+#### Classes and Supported Models
+
+| Class              | Target Model                | Supported Likelihoods                    | Prior Type                  |
+|-------------------|-----------------------------|------------------------------------------|-----------------------------|
+| `TAVIE_loc_scale` | Location-scale family (Type     | Laplace, Student’s-t, Custom SSG         | Gaussian × Inverse-Gamma   |
+| `TAVIE_QR`         | Quantile Regression          | Asymmetric Laplace (Quantile Regression) | Gaussian                   |
+| `TAVIE_type_II`    | GLMs (Exponential Family)    | Binomial, Negative Binomial              | Gaussian                   |
+
+---
