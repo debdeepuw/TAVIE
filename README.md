@@ -103,7 +103,7 @@ For each of the TAVIE class listed above, following are the components and their
 | `get_variational_estimates()` | ✅                | ✅               | ✅         | Returns a dictionary of variational parameters (mean, covariance)           |
 | `get_elbo()`                  | ✅                | ✅               | ✅         | Returns ELBO values tracked across iterations                               |
 
-✅ = Supported
+✅ = Supported. We give example usage of each of these above listed functions below for various SSG likelihoods considered in TAVIE.
 
 ---
 
