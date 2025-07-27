@@ -182,6 +182,11 @@ Now that the TAVIE model has been fit, we obtain the resultant *estimated TAVIE 
 laplace_model.get_TAVIE_means(verbose=True) # get the TAVIE estimates
 ```
 
+<p align="center">
+  <img src="assets/laplace_TAVIE_res.png" alt="TAVIE Laplace results" width="600"/>
+  <br><em>Results of TAVIE for the Laplace model</em>
+</p>
+
 If the user is interested to obtain the *variational estimates*, it can be done using `get_variational_estimates()`:
 
 ```python
