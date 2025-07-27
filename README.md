@@ -286,4 +286,4 @@ for rep in trange(num_reps, desc="Repetitions"):
     mse_tau2_BBVI[rep] = (tau2_est3 - tau2_true)**2
 ```
 
-Finally, to show the performance of TAVIE, we plot the boxplots of the $L_2-$errors between the true and estimated parameters ($\beta$ and $\tau^2$), along with the boxplots of the *run-times* across TAVIE, MFVI, and BBVI.
+Finally, to show the performance of TAVIE, we present the boxplots of the $L_2-$errors between the true and estimated parameters ($\beta$ and $\tau^2$), along with the boxplots of the *run-times* across TAVIE, MFVI, and BBVI.
