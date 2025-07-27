@@ -1,7 +1,7 @@
 # TAVIE: A Generalized Tangent Approximation Framework for Strongly Super-Gaussian Likelihoods
 
 [![Python](https://img.shields.io/badge/Python-3.9-blue)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](TAVIE/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![arXiv](https://img.shields.io/badge/arXiv-2504.05431-b31b1b)](https://arxiv.org/abs/2504.05431)
 [![Jupyter](https://img.shields.io/badge/launch-notebook-orange?logo=Jupyter)](https://mybinder.org/v2/gh/yourusername/TAVIE/HEAD)
 
