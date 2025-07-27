@@ -1,9 +1,9 @@
 # TAVIE: A Generalized Tangent Approximation Framework for Strongly Super-Gaussian Likelihoods
 
-![Python](https://img.shields.io/badge/Python-3.9-blue)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![arXiv](https://img.shields.io/badge/arXiv-2504.05431-b31b1b)
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+[![Python](https://img.shields.io/badge/Python-3.9-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![arXiv](https://img.shields.io/badge/arXiv-2504.05431-b31b1b)](https://arxiv.org/abs/2504.05431)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](#)
 
 This repository holds the implementations and source code of Tangent Approximation based Variational InferencE (TAVIE) proposed in Roy, S., Dey, P., Pati, D., & Mallick, B. K. (2025), *A Generalized Tangent Approximation Framework for Strongly Super‑Gaussian Likelihoods*, [arXiv:2504.05431](https://arxiv.org/abs/2504.05431).
 
