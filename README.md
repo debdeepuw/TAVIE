@@ -7,7 +7,6 @@
 [![Python](https://img.shields.io/badge/Python-3.9-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![arXiv](https://img.shields.io/badge/arXiv-2504.05431-b31b1b)](https://arxiv.org/abs/2504.05431)
-[![TAVIE JupyterBook](https://img.shields.io/badge/JupyterBook-view-blueviolet?logo=Jupyter)](https://roy-sr-007.github.io/TAVIE_JupyterBook)
 
 
 This repository holds the implementations and source code of *Tangent Approximation based Variational InferencE* (**TAVIE**) proposed in Roy, S., Dey, P., Pati, D., & Mallick, B. K. (2025), *A Generalized Tangent Approximation Framework for Strongly Super‑Gaussian Likelihoods*, [arXiv:2504.05431](https://arxiv.org/abs/2504.05431).
@@ -15,7 +14,7 @@ This repository holds the implementations and source code of *Tangent Approximat
 ### NEWS
 
 - This is the first official release of TAVIE v1.0.0 on GitHub.
-- Explore different example cases, settings and usage of TAVIE across various strongly super-Gaussian (SSG) likelihoods with comparison against other variational inference (VI) algorithms here in this *Jupyter Book* [![TAVIE JupyterBook](https://img.shields.io/badge/JupyterBook-view-blueviolet?logo=Jupyter)](https://roy-sr-007.github.io/TAVIE_JupyterBook).
+- Explore different example cases, settings and usage of TAVIE across various strongly super-Gaussian (SSG) likelihoods with comparison against other variational inference (VI) algorithms.
 - Application of TAVIE to real world data, to be added soon.
 
 ### Overview
