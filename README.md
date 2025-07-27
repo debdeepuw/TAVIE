@@ -200,3 +200,9 @@ ELBO = laplace_model.get_elbo() # get the ELBO across iterations
 </p>
 
 **Note**: TAVIE applied to other SSG likelihoods along with the utilities of each components in the different TAVIE classes have been illustrated in [TAVIE_examples.ipynb](./TAVIE_examples.ipynb).
+
+---
+
+### TAVIE vs other state-of-the-art variational inference algorithms
+
+We present a bake-off of TAVIE against *mean-field variational inference* (MFVI) and *black-box variational inference* (BBVI) respectively for the *Student's-t* model. The MFVI algorithm is adopted from [Wand et al., 2011](doi:10.1214/11-BA631) and is available in [CompetingMethods/mfvi.py](./CompetingMethods) along with the BBVI algorithm in [CompetingMethods/bbvi.py](./CompetingMethods).
