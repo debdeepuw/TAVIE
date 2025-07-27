@@ -1,6 +1,6 @@
 # TAVIE: A Generalized Tangent Approximation Framework for Strongly Super-Gaussian Likelihoods
 
-<p align="center">
+<p align="right">
   <img src="assets/TAVIE_animated_logo.gif" alt="TAVIE_logo" width="600"/>
 </p>
 
