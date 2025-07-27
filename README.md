@@ -32,7 +32,17 @@ Due to the large class of models which can be fitted and infered from using TAVI
 
 ### Installation and Dependencies
 
-To get started with TAVIE, clone the current Github repository and install the required dependencies (`ipython==8.30.0`, `matplotlib==3.10.3`, `numpy==2.3.2`, `pandas==2.3.1`, `rich==14.1.0`, `scikit_learn==1.7.1`, `scipy==1.16.0`, `torch==2.7.1`, and `tqdm==4.67.1`):
+To get started with TAVIE, which is build on `Python==3.13.5`, clone the current Github repository and install the required dependencies:
+
+* `ipython==8.30.0`
+* `matplotlib==3.10.3`
+* `numpy==2.3.2`
+* `pandas==2.3.1`
+* `rich==14.1.0`
+* `scikit_learn==1.7.1`
+* `scipy==1.16.0`
+* `torch==2.7.1`
+* `tqdm==4.67.1`
 
 ```
 # using SSH on bash
