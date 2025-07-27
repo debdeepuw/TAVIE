@@ -103,7 +103,6 @@ The `TAVIE` package wrapped in the TAVIE folder deals with the implementation of
 | `TAVIE_QR`         | Quantile Regression           | Asymmetric Laplace (Quantile Regression)            | Gaussian                    |
 | `TAVIE_type_II`    | GLMs (Exponential Family)     | Binomial, Negative Binomial                         | Gaussian                    |
 
----
 
 For importing all these above-mentioned classes and initializing them at once:
 
