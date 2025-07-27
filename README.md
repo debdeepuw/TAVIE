@@ -33,7 +33,7 @@ Department of Statistics
 Texas A&M University, College Station, TX, USA  
 
 📧 Email: [pritam.dey@tamu.edu](mailto:pritam.dey@tamu.edu)  
-🌐 Website: [https://pritamdey.github.io/](https://pritamdey.github.io)
+🌐 Website: [https://pritamdey.github.io](https://pritamdey.github.io)
 
 ---
 
