@@ -141,3 +141,11 @@ For each of the TAVIE class listed above, following are the components and their
 
 ---
 
+### TAVIE in action for SSG Type I family: Laplace likelihood
+
+We consider showing the utilities of each components in the `TAVIE_loc_scale()` class, particularly for the SSG Type I family having the *Laplace* likelihood of the form:
+
+\[
+y_i = \beta_0 + \mathbf{X}_i^\top \boldsymbol{\beta} + \epsilon_i, \quad \text{where } \epsilon_i \sim \text{Laplace}(0, \sigma^2)
+\]
+for $i=1,2,\ldots,n$.
