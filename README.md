@@ -290,6 +290,8 @@ for rep in trange(num_reps, desc="Repetitions"):
     tau2_est3 = res2['tau2_mean']
     mse_beta_BBVI[rep] = np.mean((beta_est3 - beta_true)**2)
     mse_tau2_BBVI[rep] = (tau2_est3 - tau2_true)**2
+
+# the results are stored in 'mse_beta_TAVIE', 'mse_tau2_TAVIE', 'mse_beta_MFVI', 'mse_tau2_MFVI', 'mse_beta_BBVI', 'mse_tau2_BBVI', 'time_TAVIE', 'time_MFVI', and 'time_BBVI'.
 ```
 
 Finally, to show the performance of TAVIE, we present the boxplots of the $\ell_2$ errors between the true and estimated parameters ($\beta$ and $\tau^2$), along with the boxplots of the *run-times* across TAVIE, MFVI, and BBVI.
