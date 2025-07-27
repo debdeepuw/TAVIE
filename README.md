@@ -10,6 +10,9 @@ This repository holds the implementations and source code of Tangent Approximati
 
 #### NEWS
 
+- This is the first official release of TAVIE on GitHub.
+- Explore different example cases and usage of TAVIE across different strongly super-Gaussian (SSG) likelihoods with comparison against other variational inference (VI) algorithms here in the Jupyter Book [![TAVIE JupyterBook](https://img.shields.io/badge/JupyterBook-view-blueviolet?logo=Jupyter)](https://roy-sr-007.github.io/TAVIE_JupyterBook).
+
 TAVIE works for a large class of strongly super-Gaussian (SSG) likelihoods, currently comprising of two types of families:
 - *Type I families*: These comprise of linear regression models with heavy-tailed error distributions. Notable families of error distributions which can be addressed by TAVIE include the Laplace (Double-Exponential) and Student's-$t$ families. In general, scaled-mixture of zero-mean Gaussian distributions have the SSG form, and thus can be addressed by TAVIE.
 - *Type II families*: These comprise of generalized linear models with Binomial (including Bernoulli) and Negative-Binomial response distributions.
