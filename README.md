@@ -126,7 +126,7 @@ type_II_model = TAVIE_type_II(fit_intercept=True, scale_X=False, family="binomia
 
 ### Callable functions `afunc` and `cfunc` in `TAVIE_loc_scale()` for custom location-scale family
 
-The *callable* functions `afunc` and `cfunc` are defined in terms of the probability density function (PDF) of the location-scale error distribution family. In other words, when performing the regression $y_i = X_i^{\top}\beta + \epsilon_i$, where $\epsilon_i/\tau$ has the PDF $p(x)$, the functions $A(x)$ and $c(x)$ are defined as:
+The *callable* functions `afunc` and `cfunc` are defined in terms of the probability density function (PDF) of the location-scale error distribution family. In other words, when performing the regression $y_i = \boldsymbol{X}_i^{\top}\boldsymbol{\beta} + \epsilon_i$, where $\epsilon_i/\tau$ has the PDF $p(x)$, the functions $A(x)$ and $c(x)$ are defined as:
 
 $$
 A(x) = -\frac{x\cdot p'(x)}{2\cdot p(x)} =(2x)^{-1}\cdot \frac{d}{dx}\log p(x),
@@ -160,14 +160,14 @@ For each of the TAVIE class listed above, following are the components and their
 
 We consider showing the utilities of each components in the `TAVIE_loc_scale()` class, particularly for the SSG Type I family having the *Laplace* likelihood of the form:
 
-**Laplace error model**: $y_i = \beta_0 + \mathbf{X}_i^\top \boldsymbol{\beta} + \epsilon_i, \quad \text{where } \epsilon_i \sim \text{Laplace}(0, \sigma^2=\tau^{-2})$, for $i=1,2,\ldots,n$ with $f(\epsilon \mid \tau^2) = \frac{\sqrt{\tau^2}}{2} \exp\left( -\sqrt{\tau^2} \cdot |\epsilon| \right)$.
+**Laplace error model**: $y_i = \beta_0 + \boldsymbol{X}_i^\top \boldsymbol{\beta} + \epsilon_i, \quad \text{where } \epsilon_i \sim \text{Laplace}(0, \sigma^2=\tau^{-2})$, for $i=1,2,\ldots,n$ with $f(\epsilon \mid \tau^2) = \frac{\sqrt{\tau^2}}{2} \exp\left( -\sqrt{\tau^2} \cdot |\epsilon| \right)$.
 
 **Prior**: $(\boldsymbol{\beta}, \tau^2)$ is endowed upon with a prior as, $\boldsymbol{\beta}\mid \tau^2 \sim N(\boldsymbol{m}, \boldsymbol{V}/\tau^2)$ and $\tau^2\sim Gamma(a/2, b/2)$.
 
 We first generate the data from the Laplace model with data parameters:
 * $(n, p, \tau^2_{\text{true}}) = (10000, 5, 8)$,
 * The design matrix $X\in \mathbb{R}^{p+1}$ comprise of entries from the *standard normal distribution* with the first column being $1_n$ automatically added by the `TAVIE_loc_scale()` class on choosing `fit_intercept=True`,
-* $\beta_{\text{true}} = (\beta_0, \beta)\in \mathbb{R}^{p+1}$ is also generated from the *standard normal distribution*, and
+* $\boldsymbol{\beta}_{\text{true}} = (\beta_0, \beta)\in \mathbb{R}^{p+1}$ is also generated from the *standard normal distribution*, and
 * $\epsilon_i \sim Laplace(0, \tau_{\text{true}}^{-2})$.
 
 ```python
@@ -235,9 +235,9 @@ First, we initialize the corresponding Student's-t TAVIE model:
 t_model = TAVIE_loc_scale(family="student", fit_intercept=True)
 ```
 
-Following the model initialization, we set the experimental data parameters and containers to store the $\ell_2$ errors between the true and estimated parameters ($\beta$ and $\tau^2$) from TAVIE, MFVI, and BBVI.
+Following the model initialization, we set the experimental data parameters and containers to store the $\ell_2$ errors between the true and estimated parameters ($\boldsymbol{\beta}$ and $\tau^2$) from TAVIE, MFVI, and BBVI.
 
-* The true regression coefficients are generated from $\beta \sim N(2, \tau^{-2})$, where $\tau^2 = 2$, and
+* The true regression coefficients are generated from $\boldsymbol{\beta} \sim N(2, \tau^{-2})$, where $\tau^2 = 2$, and
 * The degrees of freedom $\nu$ is set as $2$.
 
 ```python
