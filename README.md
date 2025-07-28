@@ -120,17 +120,23 @@ qr_model = TAVIE(fit_intercept=True, scale_X=False, scale_y=False)
 type_II_model = TAVIE_type_II(fit_intercept=True, scale_X=False, family="binomial")
 ```
 
-**Note**: When initializing the TAVIE location-scale model for `laplace` or `student`, `afunc` and `cfunc` are computed in-built, whereas if a custom location-scale family is chosen, the corresponding callable functions for `afunc` and `cfunc` are to be provided in `TAVIE_loc_scale()` by the user. The following section has a detailed overview on these callable functions.
+**Note**: When initializing the TAVIE location-scale model under custom location-scale error distribution family, the user is required to pass callable functions `afunc` and `cfunc` to the `TAVIE_loc_scale()` class. More details are to follow in the subsequent section.
 
 ---
 
 ### Callable functions `afunc` and `cfunc` in `TAVIE_loc_scale()` for custom location-scale family
 
-The *callable* functions `afunc` and `cfunc` are defined in terms of the probability density function (PDF) of the location-scale error distribution family. In other words, when performing the regression $y_i = X_i^{\top{T}}\beta + \epsilon_i$, where $\epsilon_i/\tau$ is has the PDF $p(x)$, $A(x)$ and $c(x)$ are defined as:
+The *callable* functions `afunc` and `cfunc` are defined in terms of the probability density function (PDF) of the location-scale error distribution family. In other words, when performing the regression $y_i = X_i^{\top}\beta + \epsilon_i$, where $\epsilon_i/\tau$ has the PDF $p(x)$, the functions $A(x)$ and $c(x)$ are defined as:
 
 $$
-A(x) = -\frac{x p'(x)}{2\cdot p(x)} =(2x)^{-1}\cdot \frac{d}{dx}\log p(x),\quad c(x) = \log p(x)  - \frac{x\cdot p'(x)}{2\cdot p(x)} = \log p(x) - \frac{x}{2}\frac{d}{dx}\log p(x).
+A(x) = -\frac{x\cdot p'(x)}{2\cdot p(x)} =(2x)^{-1}\cdot \frac{d}{dx}\log p(x),
 $$
+
+$$
+c(x) = \log p(x)  - \frac{x\cdot p'(x)}{2\cdot p(x)} = \log p(x) - \frac{x}{2}\cdot \frac{d}{dx}\log p(x),
+$$
+
+where $p'(x) = \frac{d}{dx} p(x)$. When calling `TAVI_loc_scale()` class for `family=laplace` and `family=student`, the computation of the callable functions `afunc` and `cfunc` are performed in-built.
 
 ---
 
