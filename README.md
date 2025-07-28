@@ -136,7 +136,7 @@ $$
 c(x) = \log p(x)  - \frac{x\cdot p'(x)}{2\cdot p(x)} = \log p(x) - \frac{x}{2}\cdot \frac{d}{dx}\log p(x),
 $$
 
-where $p'(x) = \frac{d}{dx} p(x)$. When calling `TAVI_loc_scale()` class for `family=laplace` and `family=student`, the computation of the callable functions `afunc` and `cfunc` are performed in-built.
+where $p'(x) = \frac{d}{dx} p(x)$. When calling `TAVIE_loc_scale()` class for `family="laplace"` and `family="student"`, the computation of the callable functions `afunc` and `cfunc` are performed in-built.
 
 ---
 
