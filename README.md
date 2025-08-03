@@ -341,8 +341,17 @@ We fit the `TAVIE_QR()` module (class) on $n = 10^6$ sub-sampled data points acr
 
 It is important to note here that, `FAST QR` is an algorithm to provide scalable solutions in case of large-scale quantile regression problems, which is beyond the scope of TAVIE. The `FAST QR` estimates are used only for the purpose of comparison as well as empirical evaluation of the `TAVIE QR` algorithm.
 
+<p align="center">
+  <img src="assets/comparison_QR.gif" alt="comparison QR" width="600"/>
+  <br><em></em>
+</p>
+
 The $\ell_2$ errors between the `TAVIE QR` and `FAST QR` estimates are as follows.
 
+<p align="center">
+  <img src="assets/l2_error_QR.gif" alt="l2 error QR" width="600"/>
+  <br><em></em>
+</p>
 
 For the detailed code implementation, refer to the Jupyter notebook [census_QR_data_study.ipynb](./census_QR_data_study.ipynb).
 
