@@ -318,7 +318,7 @@ Finally, to show the performance of TAVIE, we present the boxplots of the $\ell_
   <br><em>Comparison of TAVIE against MFVI and BBVI under the Student's-t model, animated over number of repetitions</em>
 </p>
 
-**Note**: For more TAVIE comparisons under different SSG likelihoods, please see [comparisons.ipynb](./comparisons.ipynb). Further, we would also like to direct the reader's (user's) attention towards convergence diagnositics of competing methods (in particular, BBVI) and TAVIE performed in [convergence.ipynb](./convergence.ipynb).
+**Note**: For more TAVIE comparisons under different SSG likelihoods, please see [comparisons.ipynb](./comparisons.ipynb). Further, we would also like to direct the reader's (user's) attention towards convergence diagnostics of competing methods (in particular, BBVI) and TAVIE performed in [convergence.ipynb](./convergence.ipynb).
 
 ---
 
