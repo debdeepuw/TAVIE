@@ -326,6 +326,20 @@ Finally, to show the performance of TAVIE, we present the boxplots of the $\ell_
 
 We exemplify the application of TAVIE in two real data studies as follows.
 
-- *Quantile regression in U.S. 2000 Census data*: TAVIE is applied to perform *quantile regression* (hereby referred to as `TAVIE QR`) on the U.S. 2000 Census data (<http://www.census.gov/census2000/PUMS5.html>) to infer about the behavior of *log annual salary* with respect to different *demographic* characteristics. In particular, state-level Census 2000 data containing individual records of the characteristics for a $5\%$ sample of people and housing units has been taken into account. The log of annual salary is treated as the response with demographic characteristics (*gender*, *age*, *race*, *marital status*, and *education level*) of people with $40$ or more weeks of work in the previous year and $35$ or more hours per week of work, constitutes the set of primary features. `TAVIE QR`'s performance is compared with a fast approximate algorithm for quantile regression `Fast QR` (Algorithm $5$ in [Yang et al., 2013](http://proceedings.mlr.press/v28/yang13f.pdf)), where both the methods are applied on the U.S. 2000 Census dataset.
+- **Quantile regression in U.S. 2000 Census data**: TAVIE is applied to perform *quantile regression* (hereby referred to as `TAVIE QR`) on the U.S. 2000 Census data (<http://www.census.gov/census2000/PUMS5.html>) to infer about the behavior of *log annual salary* with respect to different *demographic* characteristics. In particular, state-level Census 2000 data containing individual records of the characteristics for a $5\%$ sample of people and housing units has been taken into account. The log of annual salary is treated as the response with demographic characteristics (*gender*, *age*, *race*, *marital status*, and *education level*) of people with $40$ or more weeks of work in the previous year and $35$ or more hours per week of work, constitutes the set of primary features. `TAVIE QR`'s performance is compared with a fast approximate algorithm for quantile regression `Fast QR` (Algorithm $5$ in [Yang et al., 2013](http://proceedings.mlr.press/v28/yang13f.pdf)), where both the methods are applied on the U.S. 2000 Census dataset.
+
+-     
+
+#### TAVIE for Bayesian quantile regression
+
+We fit the `TAVIE_QR()` module (class) on $n = 10^6$ sub-sampled data points across $p=11$ features (viz., `Female`, `Age30`, `Age40`, `Age50`, `Age60`, `Age70`, `NonWhite`, `Married`, `Education`, and `Education2`). Following are the plots of the `TAVIE QR` estimates for different quantiles across each of the variables along with the corresponding $95\%$ confidence bands.
+
+It is important to note here that, `FAST QR` is an algorithm to provide scalable solutions in case of large-scale quantile regression problems, which is beyond the scope of TAVIE. The `FAST QR` estimates are used only for the purpose of comparison as well as empirical evaluation of the `TAVIE QR` algorithm.
+
+The $\ell_2$ errors between the `TAVIE QR` and `FAST QR` estimates are as follows.
+
+
+For the detailed code implementation, refer to the Jupyter notebook [census_QR_data_study.ipynb](./census_QR_data_study.ipynb).
+
 
 ---
