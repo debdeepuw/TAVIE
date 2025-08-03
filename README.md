@@ -349,7 +349,7 @@ It is important to note here that, `FAST QR` is an algorithm to provide scalable
 Note that, the `TAVIE QR` estimates almost coincides with the `FAST QR` estimates in the plot above, indicating towards similar performance of `TAVIE QR` and `FAST QR`, even when the `TAVIE_QR()` class has been fed a million ($10^6$) data points in contrast to `FAST QR`'s execution over $5\times 10^6$ samples. The closeness of the `TAVIE QR` and `FAST QR` estimates are highlighted using the $\ell_2$ errors as follows.
 
 <p align="center">
-  <img src="assets/l2_error_QR.gif" alt="l2 error QR" width="800"/>
+  <img src="assets/l2_error_QR.png" alt="l2 error QR" width="800"/>
   <br><em>Animated L2-errors between the TAVIE QR and Fast QR estimates</em>
 </p>
 
