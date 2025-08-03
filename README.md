@@ -350,7 +350,7 @@ The closeness of the `TAVIE QR` and `FAST QR` estimates are highlighted using th
 
 <p align="center">
   <img src="assets/l2_error_QR.gif" alt="l2 error QR" width="600"/>
-  <br><em>L2-errors between the TAVIE QR and Fast QR estimates</em>
+  <br><em>Animated L2-errors between the TAVIE QR and Fast QR estimates</em>
 </p>
 
 For the detailed code implementation, refer to the Jupyter notebook [census_QR_data_study.ipynb](./census_QR_data_study.ipynb).
