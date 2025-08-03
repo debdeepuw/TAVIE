@@ -332,7 +332,12 @@ We exemplify the application of TAVIE in two real data studies as follows.
 
 #### TAVIE for Bayesian quantile regression
 
-We fit the `TAVIE_QR()` module (class) on $n = 10^6$ sub-sampled data points across $p=11$ features (viz., `Female`, `Age30`, `Age40`, `Age50`, `Age60`, `Age70`, `NonWhite`, `Married`, `Education`, and `Education2`). Following are the plots of the `TAVIE QR` estimates for different quantiles across each of the variables along with the corresponding $95\%$ confidence bands.
+We fit the `TAVIE_QR()` module (class) on $n = 10^6$ sub-sampled data points across $p=11$ features (viz., `Female`, `Age30`, `Age40`, `Age50`, `Age60`, `Age70`, `NonWhite`, `Married`, `Education`, `Education2`, and `Intercept`). Following are the plots of the `TAVIE QR` estimates for different quantiles across each of the variables along with the corresponding $95\%$ confidence bands.
+
+<p align="center">
+  <img src="assets/tavie_ci_QR_animation.gif" alt="TAVIE QR estimates" width="600"/>
+  <br><em></em>
+</p>
 
 It is important to note here that, `FAST QR` is an algorithm to provide scalable solutions in case of large-scale quantile regression problems, which is beyond the scope of TAVIE. The `FAST QR` estimates are used only for the purpose of comparison as well as empirical evaluation of the `TAVIE QR` algorithm.
 
