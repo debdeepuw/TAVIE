@@ -328,7 +328,7 @@ We exemplify the application of TAVIE in two real data studies as follows.
 
 - **Quantile regression with U.S. 2000 Census data**: TAVIE is applied to perform *quantile regression* (hereby referred to as `TAVIE QR`) on the U.S. 2000 Census data (<http://www.census.gov/census2000/PUMS5.html>) to infer about the behavior of *log annual salary* with respect to different *demographic* characteristics. In particular, state-level Census 2000 data containing individual records of the characteristics for a $5\%$ sample of people and housing units has been taken into account. The log of annual salary is treated as the response with demographic characteristics (*gender*, *age*, *race*, *marital status*, and *education level*) of people with $40$ or more weeks of work in the previous year and $35$ or more hours per week of work, constitutes the set of primary features. `TAVIE QR`'s performance is compared with a fast approximate algorithm for quantile regression `Fast QR` (Algorithm $5$ in [Yang et al., 2013](http://proceedings.mlr.press/v28/yang13f.pdf)), where both the methods are applied on the U.S. 2000 Census dataset.
 
--     
+- **Negative Binomial model for predicting gene expressions**: We use our TAVIE negative-binomial model for predicting gene expressions in the **STARmap** *spatial transcriptomics* data set (<https://lce.biohpc.swmed.edu/star/explorer.php>). STARmap consists of data from $4$ mice. The experimental mice were dark housed for $4$ days and then either exposed to light or kept in the dark for another one hour before obtaining measurements from the primary visual cortex of each of the mouse brain. The data comprises of the expression of $160$ genes with the number of cells varying between from $931$ to $1167$ for the $4$ diferent mice. We compare the performance of TAVIE and BBVI in predicting the gene expressions over different spatial locations.
 
 #### TAVIE for Bayesian quantile regression
 
@@ -350,10 +350,35 @@ Note that, the `TAVIE QR` estimates almost coincides with the `FAST QR` estimate
 
 <p align="center">
   <img src="assets/l2_error_QR.png" alt="l2 error QR" width="800"/>
-  <br><em>Animated L2-errors between the TAVIE QR and Fast QR estimates</em>
+  <br><em>L2-errors between the TAVIE QR and Fast QR estimates</em>
 </p>
 
 For the detailed code implementation, refer to the Jupyter notebook [census_QR_data_study.ipynb](./census_QR_data_study.ipynb).
 
+
+#### TAVIE for Negative Binomial spatial regression in STARmap
+
+We fit the `TAVIE_type_II(..., family='negbin')` module (class) on the expression of each of $G=160$ genes across $n = 941$ cells (spatial locations). A basis of $p=27$ *product cubic B-spline functions* was computed at each of the spatial locations.
+
+<p align="center">
+  <img src="assets/gene_expressions.png" alt="gene" width="700"/>
+  <br><em>First 15 gene expressions across spatial locations</em>
+</p>
+
+Following are some of the basis functions computed across spatial locations.
+
+<p align="center">
+  <img src="assets/bases.png" alt="bases" width="700"/>
+  <br><em>15 basis functions computed across spatial locations</em>
+</p>
+
+We also fit the BBVI (negative binomial) model for comparison with TAVIE, where the some of the predicted gene expressions are illustrated as below.
+
+<p align="center">
+  <img src="assets/fitted.png" alt="fitted" width="700"/>
+  <br><em>Some predicted gene expressions using TAVIE and BBVI</em>
+</p>
+
+It is observed that TAVIE does a superior job in predicting the gene expressions at various spatial locations over BBVI. For a detailed study, refer to [STARmap_data_study.ipynb](./STARmap_data_study.ipynb).
 
 ---
