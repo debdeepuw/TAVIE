@@ -318,7 +318,21 @@ Finally, to show the performance of TAVIE, we present the boxplots of the $\ell_
   <br><em>Comparison of TAVIE against MFVI and BBVI under the Student's-t model, animated over number of repetitions</em>
 </p>
 
-**Note**: For more TAVIE comparisons under different SSG likelihoods, please see [comparisons.ipynb](./comparisons.ipynb). Further, we would also like to direct the reader's (user's) attention towards convergence diagnostics of competing methods (in particular, BBVI) and TAVIE performed in [convergence.ipynb](./convergence.ipynb).
+**Note 1**: For more TAVIE comparisons under different SSG likelihoods, please see [comparisons.ipynb](./comparisons.ipynb). Further, we would also like to direct the reader's (user's) attention towards convergence diagnostics of competing methods (in particular, BBVI) and TAVIE performed in [convergence.ipynb](./convergence.ipynb).
+
+**Note 2**: In the above example, we compare the performance of TAVIE with the MFVI algorithm and a vanilla BBVI algorithm. Particularly, the **vanilla BBVI** algorithm assumes a diagonal covariance structure for the prior on $\beta$, yet TAVIE's results are far better than the BBVI's results. In [comparisons.ipynb](./comparisons.ipynb) and [convergence.ipynb](./convergence.ipynb), we consider comparing TAVIE (under different SSG families) with a **patience BBVI** algorithm (monitoring early convergence with respect to relative ELBO change) and a **full covariance BBVI** algorithm (assuming full covariance structure for the $\beta$ prior) respectively. Results suggests that:
+
+**While flexible VI algorithms can provide good approximations, they incur greater runtime and come with no theoretical guarantees!** In all the above numerics conducted, we showcase stronger empirical results for TAVIE when compared to the different BBVI algorithms performed.
+
+<p align="center">
+  <img src="assets/TAVIE_MFVI_BBVI_student_comparison.png" alt="TAVIE_BBVI_MFVI_student_comparison" width="850"/>
+  <br><em>TAVIE against MFVI, BBVI vanilla, BBVI patience, and BBVI full covariance for the Student's t SSG likelihood</em>
+</p>
+
+<p align="center">
+  <img src="assets/convergence_TAVIE_BBVI_student_comparison.png" alt="convergence_TAVIE_BBVI_student" width="850"/>
+  <br><em>Monitoring ELBO for TAVIE and different BBVI algorithms</em>
+</p>
 
 ---
 
