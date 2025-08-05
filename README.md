@@ -361,21 +361,21 @@ For the detailed code implementation, refer to the Jupyter notebook [census_QR_d
 We fit the `TAVIE_type_II(..., family='negbin')` module (class) on the expression of each of $G=160$ genes across $n = 941$ cells (spatial locations). A basis of $p=27$ *product cubic B-spline functions* was computed at each of the spatial locations.
 
 <p align="center">
-  <img src="assets/gene_expressions.png" alt="gene" width="700"/>
+  <img src="assets/gene_expressions.png" alt="gene" width="800"/>
   <br><em>First 15 gene expressions across spatial locations</em>
 </p>
 
 Following are some of the basis functions computed across spatial locations.
 
 <p align="center">
-  <img src="assets/bases.png" alt="bases" width="700"/>
+  <img src="assets/bases.png" alt="bases" width="800"/>
   <br><em>15 basis functions computed across spatial locations</em>
 </p>
 
 We also fit the BBVI (negative binomial) model for comparison with TAVIE, where some of the predicted gene expressions are illustrated as below.
 
 <p align="center">
-  <img src="assets/fitted.png" alt="fitted" width="700"/>
+  <img src="assets/fitted.png" alt="fitted" width="800"/>
   <br><em>Some predicted gene expressions using TAVIE and BBVI</em>
 </p>
 
