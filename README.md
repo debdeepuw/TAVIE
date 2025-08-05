@@ -372,13 +372,13 @@ Following are some of the basis functions computed across spatial locations.
   <br><em>15 basis functions computed across spatial locations</em>
 </p>
 
-We also fit the BBVI (negative binomial) model for comparison with TAVIE, where the some of the predicted gene expressions are illustrated as below.
+We also fit the BBVI (negative binomial) model for comparison with TAVIE, where some of the predicted gene expressions are illustrated as below.
 
 <p align="center">
   <img src="assets/fitted.png" alt="fitted" width="700"/>
   <br><em>Some predicted gene expressions using TAVIE and BBVI</em>
 </p>
 
-It is observed that TAVIE does a superior job in predicting the gene expressions at various spatial locations over BBVI. For a detailed study, refer to [STARmap_data_study.ipynb](./STARmap_data_study.ipynb).
+It is observed that TAVIE does a superior job in predicting the gene expressions at various spatial locations over BBVI (out of $160$ genes, TAVIE had smaller residuals for $159$ genes compared to BBVI). For a detailed study, refer to [STARmap_data_study.ipynb](./STARmap_data_study.ipynb).
 
 ---
