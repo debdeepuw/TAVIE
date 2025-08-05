@@ -1,2 +1,2 @@
-from .bbvi import BBVI_Laplace, BBVI_student, BBVI_Logistic, BBVI_NegBin
+from .bbvi import BBVI_Laplace, BBVI_Laplace_patience, BBVI_student, BBVI_student_patience, BBVI_Logistic, BBVI_Logistic_patience, BBVI_NegBin, BBVI_NegBin_patience
 from .mfvi import MFVI_Student, logit_cavi, logit_svi
