@@ -329,7 +329,7 @@ The table below lists each competing method along with the number of gene expres
 <div align="center">
 
 | Method | TAVIE Pearson RSS is lower |
-|-------------------|----------------------------------------|
+|:-----------------:|:--------------------------------------:|
 | **DADVI**         | 150                                    |
 | **ADVI (MF)**       | 160                                    |
 | **ADVI (FR)**       | 142                                    |
