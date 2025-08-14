@@ -248,7 +248,7 @@ To exemplify the performance of TAVIE against these competing methods, we illust
 
 <div align="center">
 
-| Method   | MSE of $\beta$              | MSE of $\tau^2$            | run-time                |
+| Method   | MSE of $\beta$              | MSE of $\tau^{2}$            | run-time                |
 |:----------:|:----------------------------:|:---------------------------:|:-----------------------:|
 | **TAVIE** | **5.140e-04 ± 1.011e-03**       | **2.425e-02 ± 1.558e-01**       | **3.255e-03 ± 4.158e-03**   |
 | **MFVI**  | 5.177e-04 ± 9.888e-04       | 5.451e-02 ± 2.611e-01       | 2.155e-02 ± 3.697e-02   |
