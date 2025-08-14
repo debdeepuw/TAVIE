@@ -152,7 +152,7 @@ For each of the TAVIE class listed above, following are the components and their
 
 
 | Method Name                   | `TAVIE_loc_scale` | `TAVIE_type_II` | `TAVIE_QR` | Description                                                                 |
-|-------------------------------|-------------------|-----------------|------------|-----------------------------------------------------------------------------|
+|-------------------------------|:------------------:|:----------------:|:-----------:|-----------------------------------------------------------------------------|
 | `fit()`                       | ✅                | ✅               | ✅         | Fits the TAVIE model                                            |
 | `get_TAVIE_means()`           | ✅                | ✅               | ✅         | Returns (and optionally displays) the TAVIE posterior means of parameters   |
 | `get_variational_estimates()` | ✅                | ✅               | ✅         | Returns a dictionary of variational estimates of the hyper-parameters           |
