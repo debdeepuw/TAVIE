@@ -135,14 +135,14 @@ type_II_model = TAVIE_type_II(fit_intercept=True, scale_X=False, family="negbin"
 The *callable* functions `afunc` and `cfunc` are defined in terms of the probability density function (PDF) of the location-scale error distribution family. In other words, when performing the regression $y_i = \boldsymbol{X}_i^{\top}\boldsymbol{\beta} + \epsilon_i$, where $\epsilon_i/\tau$ has the PDF $p(x)$, the functions $A(x)$ and $c(x)$ are defined as:
 
 $$
-A(x) = -\frac{p'(x)}{2x\cdot p(x)} =(2x)^{-1}\cdot \frac{d}{dx}\log p(x),
+A(x) = -\frac{p'(x)}{2x\cdot p(x)} =(2x)^{-1}\cdot \frac{\mathrm{d}}{\mathrm{d}x}\log\ p(x), 
 $$
 
 $$
-c(x) = \log p(x)  - \frac{x\cdot p'(x)}{2\cdot p(x)} = \log p(x) - \frac{x}{2}\cdot \frac{d}{dx}\log p(x),
+c(x) = \log\ p(x)  - \frac{x\cdot p'(x)}{2\cdot p(x)} = \log\ p(x) - \frac{x}{2}\cdot \frac{\mathrm{d}}{\mathrm{d}x}\log\ p(x),
 $$
 
-where $p'(x) = \frac{d}{dx} p(x)$. In particular, when calling `TAVIE_loc_scale()` class for `family="laplace"` and `family="student"`, the computation of the callable functions `afunc` and `cfunc` are performed in-built.
+where $p'(x) = \frac{\mathrm{d}}{\mathrm{d}x} p(x)$. In particular, when calling `TAVIE_loc_scale()` class for `family="laplace"` and `family="student"`, the computation of the callable functions `afunc` and `cfunc` are performed in-built.
 
 ---
 
@@ -249,7 +249,7 @@ To exemplify the performance of TAVIE against these competing methods, we illust
 <div align="center">
 
 | Method   | MSE of $\beta$              | MSE of $\tau^2$            | run-time                |
-|----------|-----------------------------|----------------------------|-------------------------|
+|:----------:|:----------------------------:|:---------------------------:|:-----------------------:|
 | **TAVIE** | **5.140e-04 ± 1.011e-03**       | **2.425e-02 ± 1.558e-01**       | **3.255e-03 ± 4.158e-03**   |
 | **MFVI**  | 5.177e-04 ± 9.888e-04       | 5.451e-02 ± 2.611e-01       | 2.155e-02 ± 3.697e-02   |
 | **DADVI** | 5.266e-04 ± 1.043e-03       | **2.225e-02 ± 1.279e-01**       | 5.480e-01 ± 5.018e-01   |
@@ -267,7 +267,7 @@ These results demonstrate that TAVIE consistently matches or exceeds the accurac
 <div align="center">
 
 | Description                   | `ipynb` file name | 
-|-------------------------------|-------------------|
+|:------------------------------:|:------------------:|
 | Laplace                       | [Laplace_comparisons_dadvi_tavie_bbvi.ipynb](Laplace_comparisons_dadvi_tavie_bbvi.ipynb) |
 | Student's-t                    | [Student_comparisons_dadvi_tavie_mfvi_bbvi.ipynb](Student_comparisons_dadvi_tavie_mfvi_bbvi.ipynb) |
 | Negative-Binomial              | [NegBin_comparisons_dadvi_tavie_bbvi.ipynb](NegBin_comparisons_dadvi_tavie_bbvi.ipynb) |
