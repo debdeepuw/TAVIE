@@ -257,7 +257,7 @@ To exemplify the performance of TAVIE against these competing methods, we illust
 | **ADVI FR** | 5.800e-04 ± 1.148e-03    | 1.519e-01 ± 1.414e+00       | 1.057e+01 ± 2.495e+00   |
 | **NUTS**   | **5.128e-04 ± 1.012e-03**      | **2.230e-02 ± 1.183e-01**       | 2.753e+00 ± 5.236e-01   |
 
-**Average metrics for Student's-t SSG with** $(n, p) = (1000, 5)$. **Bold** represents superior performance.
+**Average metrics for Student's-t SSG with** [n = 1000; p = 5]. **Bold** represents superior performance.
 
 </div>
 
@@ -324,7 +324,20 @@ Comparatively, we fit `ADVI (MF)`, `ADVI (FR)`, `DADVI`, and `NUTS` to compare t
   <br><em>Predicted expression of gene 'Slc17a7' by TAVIE and competing methods</em>
 </p>
 
-Following is the *Pearson residual sum of squares* plot which demonstrates the goodness-of-fit of each method in predicting the $G=160$ spatially varying gene expressions. For a detailed study, refer to [STARmap_data_study.ipynb](STARmap_data_study.ipynb).
+The table below lists each competing method along with the number of gene expressions for which its *Pearson residual sum of squares* exceeds that of TAVIE.
+
+<div align="center">
+
+| Method | TAVIE Pearson RSS is lower |
+|-------------------|----------------------------------------|
+| **DADVI**         | 150                                    |
+| **ADVI (MF)**       | 160                                    |
+| **ADVI (FR)**       | 142                                    |
+| **NUTS**          | 58                                     |
+
+</div>
+
+The accompanying plot illustrates the goodness-of-fit for each method in predicting the $G=160$ spatially varying gene expressions. For a detailed study, refer to [STARmap_data_study.ipynb](STARmap_data_study.ipynb).
 
 <p align="center">
   <img src="results_data_study/STARmap/pearson_residuals.png" alt="fitted" width="800"/>
