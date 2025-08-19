@@ -152,7 +152,7 @@ For each of the TAVIE class listed above, following are the components and their
 
 
 | Method Name                   | `TAVIE_loc_scale` | `TAVIE_type_II` | `TAVIE_QR` | Description                                                                 |
-|-------------------------------|-------------------|-----------------|------------|-----------------------------------------------------------------------------|
+|-------------------------------|:-------------------:|:-----------------:|:------------:|-----------------------------------------------------------------------------|
 | `fit()`                       | ✅                | ✅               | ✅         | Fits the TAVIE model                                            |
 | `get_TAVIE_means()`           | ✅                | ✅               | ✅         | Returns (and optionally displays) the TAVIE posterior means of parameters   |
 | `get_variational_estimates()` | ✅                | ✅               | ✅         | Returns a dictionary of variational estimates of the hyper-parameters           |
@@ -269,7 +269,7 @@ These results demonstrate that TAVIE consistently matches or exceeds the accurac
 <div align="center">
 
 | Description                   | `ipynb` file name | 
-|-------------------------------|-------------------|
+|:-------------------------------:|:-------------------:|
 | Laplace                       | [Laplace_comparisons_dadvi_tavie_bbvi.ipynb](Laplace_comparisons_dadvi_tavie_bbvi.ipynb) |
 | Student's-t                    | [Student_comparisons_dadvi_tavie_mfvi_bbvi.ipynb](Student_comparisons_dadvi_tavie_mfvi_bbvi.ipynb) |
 | Negative-Binomial              | [NegBin_comparisons_dadvi_tavie_bbvi.ipynb](NegBin_comparisons_dadvi_tavie_bbvi.ipynb) |
@@ -331,7 +331,7 @@ The table below lists each competing method along with the number of gene expres
 <div align="center">
 
 | Method | TAVIE Pearson RSS is lower |
-|-------------------|----------------------------------------|
+|:-------------------:|:----------------------------------------:|
 | **DADVI**         | 150                                    |
 | **ADVI (MF)**       | 160                                    |
 | **ADVI (FR)**       | 142                                    |
