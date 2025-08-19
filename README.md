@@ -135,14 +135,14 @@ type_II_model = TAVIE_type_II(fit_intercept=True, scale_X=False, family="negbin"
 The *callable* functions `afunc` and `cfunc` are defined in terms of the probability density function (PDF) of the location-scale error distribution family. In other words, when performing the regression $y_i = \boldsymbol{X}_i^{\top}\boldsymbol{\beta} + \epsilon_i$, where $\epsilon_i/\tau$ has the PDF $p(x)$, the functions $A(x)$ and $c(x)$ are defined as:
 
 $$
-A(x) = -\frac{p'(x)}{2x\cdot p(x)} =(2x)^{-1}\cdot \frac{\mathrm{d}}{\mathrm{d}x}\log\ p(x), 
+A(x) = -\frac{p'(x)}{2x\cdot p(x)} =(2x)^{-1}\cdot \frac{d}{dx}\log p(x),
 $$
 
 $$
-c(x) = \log\ p(x)  - \frac{x\cdot p'(x)}{2\cdot p(x)} = \log\ p(x) - \frac{x}{2}\cdot \frac{\mathrm{d}}{\mathrm{d}x}\log\ p(x),
+c(x) = \log p(x)  - \frac{x\cdot p'(x)}{2\cdot p(x)} = \log p(x) - \frac{x}{2}\cdot \frac{d}{dx}\log p(x),
 $$
 
-where $p'(x) = \frac{\mathrm{d}}{\mathrm{d}x} p(x)$. In particular, when calling `TAVIE_loc_scale()` class for `family="laplace"` and `family="student"`, the computation of the callable functions `afunc` and `cfunc` are performed in-built.
+where $p'(x) = \frac{d}{dx} p(x)$. In particular, when calling `TAVIE_loc_scale()` class for `family="laplace"` and `family="student"`, the computation of the callable functions `afunc` and `cfunc` are performed in-built.
 
 ---
 
@@ -152,7 +152,7 @@ For each of the TAVIE class listed above, following are the components and their
 
 
 | Method Name                   | `TAVIE_loc_scale` | `TAVIE_type_II` | `TAVIE_QR` | Description                                                                 |
-|-------------------------------|:------------------:|:----------------:|:-----------:|-----------------------------------------------------------------------------|
+|-------------------------------|-------------------|-----------------|------------|-----------------------------------------------------------------------------|
 | `fit()`                       | ✅                | ✅               | ✅         | Fits the TAVIE model                                            |
 | `get_TAVIE_means()`           | ✅                | ✅               | ✅         | Returns (and optionally displays) the TAVIE posterior means of parameters   |
 | `get_variational_estimates()` | ✅                | ✅               | ✅         | Returns a dictionary of variational estimates of the hyper-parameters           |
@@ -248,16 +248,18 @@ To exemplify the performance of TAVIE against these competing methods, we illust
 
 <div align="center">
 
-| Method   | MSE of $\beta$              | MSE of $\tau^{2}$            | run-time                |
-|:----------:|:----------------------------:|---------------------------|:-----------------------:|
-| **TAVIE** | **5.140e-04 ± 1.011e-03**       | **2.425e-02 ± 1.558e-01**       | **3.255e-03 ± 4.158e-03**   |
-| **MFVI**  | 5.177e-04 ± 9.888e-04       | 5.451e-02 ± 2.611e-01       | 2.155e-02 ± 3.697e-02   |
-| **DADVI** | 5.266e-04 ± 1.043e-03       | **2.225e-02 ± 1.279e-01**       | 5.480e-01 ± 5.018e-01   |
-| **ADVI MF** | 5.439e-04 ± 8.422e-04    | 1.173e-01 ± 4.751e-01       | 7.067e+00 ± 1.404e+00   |
-| **ADVI FR** | 5.800e-04 ± 1.148e-03    | 1.519e-01 ± 1.414e+00       | 1.057e+01 ± 2.495e+00   |
-| **NUTS**   | **5.128e-04 ± 1.012e-03**      | **2.230e-02 ± 1.183e-01**       | 2.753e+00 ± 5.236e-01   |
+
+| Methods  | MSE($\beta$) | MSE($\tau^2$) | Time (s) |
+|----------|:--------:|:---------:|:----------:|
+| **TAVIE**   | **5.140e-04** <br> (8.158e-05, 1.525e-03) | **2.425e-02** <br> (7.915e-06, 1.801e-01) | **3.255e-03** <br> (2.939e-03, 7.412e-03) |
+| **MFVI**    | 5.177e-04 <br> (7.724e-05, 1.506e-03) | 5.451e-02 <br> (3.043e-05, 3.156e-01) | 2.155e-02 <br> (1.091e-02, 5.851e-02) |
+| **DADVI**   | 5.266e-04 <br> (7.458e-05, 1.569e-03) | **2.225e-02** <br> (1.811e-05, 1.501e-01) | 5.480e-01 <br> (5.131e-01, 1.050e+00) |
+| **ADVI MF** | 5.439e-04 <br> (1.136e-04, 1.386e-03) | 1.173e-01 <br> (1.805e-07, 5.924e-01) | 7.067e+00 <br> (5.662e+00, 8.167e+00) |
+| **ADVI FR** | 5.800e-04 <br> (3.322e-05, 1.728e-03) | 1.519e-01 <br> (2.669e-05, 1.565e+00) | 1.057e+01 <br> (8.076e+00, 1.198e+01) |
+| **NUTS**    | **5.128e-04** <br> (7.464e-05, 1.525e-03) | **2.230e-02** <br> (1.000e-06, 1.406e-01) | 2.753e+00 <br> (2.524e+00, 3.276e+00) |
 
 **Average metrics for Student's-t SSG with** [n = 1000; p = 5]. **Bold** represents superior performance.
+
 
 </div>
 
@@ -267,7 +269,7 @@ These results demonstrate that TAVIE consistently matches or exceeds the accurac
 <div align="center">
 
 | Description                   | `ipynb` file name | 
-|:------------------------------:|:------------------:|
+|-------------------------------|-------------------|
 | Laplace                       | [Laplace_comparisons_dadvi_tavie_bbvi.ipynb](Laplace_comparisons_dadvi_tavie_bbvi.ipynb) |
 | Student's-t                    | [Student_comparisons_dadvi_tavie_mfvi_bbvi.ipynb](Student_comparisons_dadvi_tavie_mfvi_bbvi.ipynb) |
 | Negative-Binomial              | [NegBin_comparisons_dadvi_tavie_bbvi.ipynb](NegBin_comparisons_dadvi_tavie_bbvi.ipynb) |
@@ -329,7 +331,7 @@ The table below lists each competing method along with the number of gene expres
 <div align="center">
 
 | Method | TAVIE Pearson RSS is lower |
-|:-----------------:|:--------------------------------------:|
+|-------------------|----------------------------------------|
 | **DADVI**         | 150                                    |
 | **ADVI (MF)**       | 160                                    |
 | **ADVI (FR)**       | 142                                    |
